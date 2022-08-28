@@ -3,10 +3,8 @@
   "imagesPreload": [
     "me-about.png",
     "me.png",
-    "avatar1.jpg",
-    "avatar2.jpg",
-    "avatar3.jpg",
-    "avatar4.jpg",
+    "aamir.jpeg",
+    "mohsin.jpg",
     "wif.jpeg",
     "expertise.png",
     "pizzashop.jpg",
@@ -144,8 +142,8 @@
     "timelineCards": [
       {
         "date": "2022",
-        "title": "React and JS Developer",
-        "description": "Working on React and Typescript based projects and Unit testing using jest and React Testing Library (RTL)"
+        "title": "React Developer",
+        "description": "Working on React with Typescript based projects and unit testing using jest and React Testing Library (RTL)"
       },
       {
         "date": "2021",
@@ -238,24 +236,14 @@
     "title": "Testimonials",
     "testimonialsCards": [
       {
-        "image": "avatar1.jpg",
-        "title": "Rahul Arekar",
-        "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam"
+        "image": "aamir.jpeg",
+        "title": "Aamir Thekiya",
+        "description": "I feel myself lucky to have a friend like you. You are having a very great problem solving skills and backend implementations. With the help of you I had explore myself how to solve competitive programming questions. Best of luck my friend"
       },
       {
-        "image": "avatar2.jpg",
-        "title": "Tauseef Ansari",
-        "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam"
-      },
-      {
-        "image": "avatar3.jpg",
+        "image": "mohsin.jpg",
         "title": "Mohsin Essani",
-        "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam"
-      },
-      {
-        "image": "avatar4.jpg",
-        "title": "Yash Kunte",
-        "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam"
+        "description": "Working with you is like learning and implementing the real time projects. Your logics for implementing the backend is very amazing. Without your support It was impossible to develop highly scaled projects. I wish you all the best for your future and hoping to meet and work in future with you"
       }
     ]
   },
