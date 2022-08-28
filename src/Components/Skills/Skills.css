@@ -1,0 +1,140 @@
+.skills__container ul {
+  margin-inline: auto;
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  justify-content: center;
+  gap: 2rem;
+}
+
+.skills__container ul li {
+  max-width: 12rem;
+  justify-self: center;
+  display: grid;
+  grid-template:
+    'icon'
+    'line'
+    'dot'
+    'title'
+    'bar' 1fr;
+  justify-items: center;
+  align-items: flex-start;
+  text-align: center;
+  transition: var(--transition);
+  cursor: pointer;
+}
+
+.skills__container ul li:hover {
+  transform: scale(1.1);
+}
+
+.skills__container ul li .skills__icon {
+  grid-area: icon;
+  width: 6rem;
+  aspect-ratio: 1;
+  display: grid;
+  place-items: center;
+  color: var(--color-white);
+  font-size: 3.5rem;
+  border: 0.4rem solid var(--color-white);
+  border-radius: 50%;
+  background: var(--color-primary-variant);
+  box-shadow: -0.5rem 0.5rem 1rem rgba(0, 0, 0, 0.45),
+    inset -0.25rem 0.25rem 0.5rem rgba(0, 0, 0, 0.45);
+}
+
+.skills__container ul li::before {
+  content: '';
+  grid-area: line;
+  height: 2rem;
+  border-right: 2px dotted currentColor;
+}
+
+.skills__container ul li::after {
+  content: '';
+  grid-area: dot;
+  width: 1rem;
+  aspect-ratio: 1;
+  border-radius: 50%;
+  background: var(--color-primary-variant);
+  justify-self: center;
+  margin-bottom: 0.5rem;
+}
+
+.skills__container ul li .skills__title {
+  grid-area: title;
+  margin-block: 0.5rem;
+  text-align: center;
+}
+
+/* ====================== Progress ====================== */
+.skills__progress-bar {
+  position: relative;
+  display: inline-block;
+  width: 8rem;
+  height: 2rem;
+  border-radius: 1em;
+  background-color: var(--color-primary);
+  box-shadow: inset 0 2px 10px rgb(255 255 255 / 50%), 1px 2px 6px rgb(255 255 255 / 30%);
+  border: 2px solid var(--color-primary-variant);
+  overflow: hidden;
+}
+
+.skills__progress-bar:before {
+  content: '';
+  position: absolute;
+  width: 100%;
+  height: 200%;
+  background: var(--color-white);
+  left: -50%;
+  top: -100%;
+  border-radius: 100%;
+  opacity: 0.1;
+  z-index: 2;
+}
+
+.skills__progress-label {
+  color: var(--color-white);
+  position: absolute;
+  width: 100%;
+  font-size: 1.125em;
+  line-height: 1.5em;
+  text-align: center;
+  opacity: 0.9;
+  z-index: 1;
+}
+
+.skills__progress-animation {
+  position: absolute;
+  background: var(--color-bg-variant);
+  box-shadow: 0 0 10px var(--color-primary);
+  width: 8em;
+  height: 8em;
+  border-radius: 48% 52%;
+  top: -3em;
+  left: -8em;
+  animation: waterAnimation 3s linear infinite;
+}
+
+/* ====================== PROGRESS BAR ANIMATION ====================== */
+@keyframes waterAnimation {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+/* ====================== MEDIA QUERIES (MEDIUM DEVICES) ====================== */
+@media screen and (max-width: 1024px) {
+  .skills__container ul {
+    grid-template-columns: repeat(4, 1fr);
+  }
+}
+
+/* ====================== MEDIA QUERIES (SMALL DEVICES) ====================== */
+@media screen and (max-width: 600px) {
+  .skills__container ul {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
