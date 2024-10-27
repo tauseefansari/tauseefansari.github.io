@@ -11,6 +11,7 @@
     "food-order-app.png",
     "mapticker-map-locations.png",
     "forkify-recipe-finder.png",
+    "dice-rollers.png",
     "next-food.png",
     "wif.jpeg",
     "expertise.png",
@@ -236,6 +237,21 @@
           {
             "title": "Demo",
             "url": "https://mapticker.netlify.app"
+          }
+        ]
+      },
+      {
+        "image": "dice-rollers.png",
+        "title": "Dice Rollers",
+        "description": "A Two player Dice Game made with JavaScript, HTML and CSS",
+        "buttons": [
+          {
+            "title": "GitHub",
+            "url": "https://github.com/tauseefansari/Dice-Rollers"
+          },
+          {
+            "title": "Demo",
+            "url": "https://dicerollers.netlify.app"
           }
         ]
       },
