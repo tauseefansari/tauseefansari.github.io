@@ -5,6 +5,13 @@
     "me.png",
     "aamir.jpeg",
     "mohsin.jpg",
+    "portfolio-builder.png",
+    "quotes-collections.png",
+    "expense-tracker.png",
+    "food-order-app.png",
+    "mapticker-map-locations.png",
+    "forkify-recipe-finder.png",
+    "next-food.png",
     "wif.jpeg",
     "expertise.png",
     "pizzashop.jpg",
@@ -35,7 +42,7 @@
     },
     {
       "iconName": "Email",
-      "url": "mailto:tauseeftanvir@gmail.com"
+      "url": "mailto:tauseef.ansari92786@gmail.com"
     }
   ],
   "navigation": {
@@ -101,7 +108,7 @@
         "description": "20+ Completed Projects"
       }
     ],
-    "aboutDescriptions": "Hello! I'm Tauseef Ansari, a software developer, a React enthusiast, and a guy slighty obsessed for code quality. Also I'm interested in Java and Python. I am having 1 Year experience in React, JavaScript and 8 months experience in PHP and MySQL. You will get to know about me and my profile through my Resume"
+    "aboutDescriptions": "Hello! I'm Tauseef Ansari, A Passionate and detail-oriented software engineer with 3.5+ years of ReactJS, NextJS and TypeScript experience, seeking an opportunity to leverage technical expertise and problem-solving skills to lead small teams and contribute to innovative projects. Committed to building elegant and accessible user interfaces that deliver creative and efficient solutions to complex challenges."
   },
   "skills": {
     "id": "skills",
@@ -141,19 +148,14 @@
     "title": "My Journey",
     "timelineCards": [
       {
-        "date": "2022",
-        "title": "React Developer",
-        "description": "Working on React with Typescript based projects and unit testing using jest and React Testing Library (RTL)"
+        "date": "2022 - 2024",
+        "title": "ReactJS & NextJS Developer",
+        "description": "Specialized in performance optimization and accessibility, integrating best practices to deliver high usability and consistent functionality across all devices. Championed inclusivity by implementing accessibility features, broadening user reach and supporting ethical development standards. Spearheaded testing innovations using Playwright for robust, end-to-end testing, consistently meeting and exceeding user expectations. Boosted application performance through advanced techniques like code splitting and lazy loading, achieving faster loading times and an improved user experience. Ensured high code quality by applying comprehensive unit tests with tools such as Jest, Enzyme, React Testing Library, and Vitest. Collaborated effectively within cross-functional teams, contributing to the development of responsive, high-performance applications with ReactJS and NextJS."
       },
       {
-        "date": "2021",
+        "date": "2021 - 2022",
         "title": "JavaScript Developer",
-        "description": "Worked on Javascript ES6 and babel based modular JS Projects"
-      },
-      {
-        "date": "2020",
-        "title": "PHP Developer",
-        "description": "Worked on PHP based E-Learning Platform with SQL Databased and PHP Framework like Codeigniter"
+        "description": "Crafted optimized and responsive JavaScript code, transforming intricate designs into seamless, interactive user experiences across multiple devices. Emphasized code reusability by creating modular, maintainable components, enhancing development efficiency and minimizing redundancy. Gained expertise in building scalable frontend applications, honing skills in core JavaScript principles and best practices for frontend development."
       }
     ]
   },
@@ -163,13 +165,99 @@
     "title": "Portfolio",
     "portfolioCards": [
       {
-        "image": "wif.jpeg",
-        "title": "What's In Fridge",
-        "description": "Android App developed using Android Studio",
+        "image": "next-food.png",
+        "title": "Next Food App",
+        "description": "Delicious meals, shared by a food-loving community",
         "buttons": [
           {
             "title": "GitHub",
-            "url": "https://github.com/tauseefansari/Whats-In-Fridge"
+            "url": "https://github.com/tauseefansari/next-food"
+          },
+          {
+            "title": "Demo",
+            "url": "https://next-food-nextjs.vercel.app"
+          }
+        ]
+      },
+      {
+        "image": "portfolio-builder.png",
+        "title": "Portfolio Builder",
+        "description": "A simple configuration that turns out into a beautiful portfolio",
+        "buttons": [
+          {
+            "title": "GitHub",
+            "url": "https://github.com/tauseefansari/Portfolio-Builder"
+          },
+          {
+            "title": "Demo",
+            "url": "https://tauseefansari.github.io/Portfolio-Builder"
+          }
+        ]
+      },
+      {
+        "image": "expense-tracker.png",
+        "title": "Expense Tracker",
+        "description": "A project for storing user expenses and displaying Bars for each months as a views to users for better understanding",
+        "buttons": [
+          {
+            "title": "GitHub",
+            "url": "https://github.com/tauseefansari/Expense-Tracker"
+          },
+          {
+            "title": "Demo",
+            "url": "https://user-expense-tracker.netlify.app"
+          }
+        ]
+      },
+      {
+        "image": "forkify-recipe-finder.png",
+        "title": "Forkify Recipe Finder",
+        "description": "A samll node js based project for searching and storing of recipies and their ingridients",
+        "buttons": [
+          {
+            "title": "GitHub",
+            "url": "https://github.com/tauseefansari/Forkify-Recipe-Finder"
+          },
+          {
+            "title": "Demo",
+            "url": "https://recipyfork.netlify.app"
+          }
+        ]
+      },
+      {
+        "image": "mapticker-map-locations.png",
+        "title": "Mapticker Map Locations",
+        "description": "A Javascript based map with geolocation to keep track of Running and Cycling of a users activity",
+        "buttons": [
+          {
+            "title": "GitHub",
+            "url": "https://github.com/tauseefansari/Mapticker-Map-Locations"
+          },
+          {
+            "title": "Demo",
+            "url": "https://mapticker.netlify.app"
+          }
+        ]
+      },
+      {
+        "image": "quotes-collections.png",
+        "title": "Quotes Collections",
+        "description": "Quotes Application made using React JS where user store their quotes and users can also comments on them",
+        "buttons": [
+          {
+            "title": "GitHub",
+            "url": "https://github.com/tauseefansari/Quotes-Collections"
+          }
+        ]
+      },
+      {
+        "image": "food-order-app.png",
+        "title": "Food Order App",
+        "description": "A Food Ordering App made using React JS along with Firebase as a backend Realtime Database",
+        "buttons": [
+          {
+            "title": "GitHub",
+            "url": "https://github.com/tauseefansari/Food-Order-App"
           }
         ]
       },
@@ -181,17 +269,6 @@
           {
             "title": "GitHub",
             "url": "https://github.com/tauseefansari/E-Learning-System"
-          }
-        ]
-      },
-      {
-        "image": "pizzashop.jpg",
-        "title": "Pizza Ordering System",
-        "description": "Pizza ordering system created using Python Tkinter",
-        "buttons": [
-          {
-            "title": "GitHub",
-            "url": "https://github.com/tauseefansari/Python-Pizza-Shop-Project"
           }
         ]
       },
@@ -214,6 +291,28 @@
           {
             "title": "GitHub",
             "url": "https://github.com/tauseefansari/FriendFeed-Social-Network-Website"
+          }
+        ]
+      },
+      {
+        "image": "pizzashop.jpg",
+        "title": "Pizza Ordering System",
+        "description": "Pizza ordering system created using Python Tkinter",
+        "buttons": [
+          {
+            "title": "GitHub",
+            "url": "https://github.com/tauseefansari/Python-Pizza-Shop-Project"
+          }
+        ]
+      },
+      {
+        "image": "wif.jpeg",
+        "title": "What's In Fridge",
+        "description": "Android App developed using Android Studio",
+        "buttons": [
+          {
+            "title": "GitHub",
+            "url": "https://github.com/tauseefansari/Whats-In-Fridge"
           }
         ]
       },
@@ -257,9 +356,9 @@
       {
         "iconName": "Email",
         "title": "Email",
-        "description": "tauseeftanvir@gmail.com",
+        "description": "tauseef.ansari92786@gmail.com",
         "link": {
-          "url": "mailto:tauseeftanvir@gmail.com",
+          "url": "mailto:tauseef.ansari92786@gmail.com",
           "title": "Send a message"
         }
       },
