@@ -1,0 +1,251 @@
+@import '@fontsource-variable/space-grotesk/wght.css';
+@import '@fontsource/archivo/latin-400.css';
+@import '@fontsource/archivo/latin-500.css';
+@import '@fontsource/archivo/latin-600.css';
+@import '@fontsource/archivo/latin-700.css';
+@import 'tailwindcss';
+
+/*
+ * Design system tokens — single source of truth (DRY).
+ * Dark is default; [data-theme='light'] overrides the same names.
+ */
+@theme {
+  /* Surfaces */
+  --color-bg: #09090b;
+  --color-surface: #18181b;
+  --color-text: #fafafa;
+  --color-text-muted: #d4d4d8;
+  --color-accent: #4690f6;
+  --color-accent-2: #60a5fa;
+  --color-cta: #2563eb;
+  --color-glow: rgb(37 99 235 / 0.35);
+
+  /* Glass (Spatial UI) — surface-tinted for readable contrast on dark bg */
+  --color-glass: color-mix(in srgb, var(--color-surface) 88%, transparent);
+  --color-glass-border: rgb(255 255 255 / 0.22);
+  --blur-glass: 24px;
+
+  /* Motion */
+  --animation-duration: 350ms;
+  --animation-ease-out: cubic-bezier(0.16, 1, 0.3, 1);
+  --parallax-speed-bg: 0.3;
+  --parallax-speed-mid: 0.6;
+  --parallax-speed-fg: 1;
+  --perspective: 1000px;
+
+  /* Elevation */
+  --shadow-elevation-1: 0 1px 3px rgb(0 0 0 / 0.2);
+  --shadow-elevation-2: 0 4px 12px rgb(0 0 0 / 0.25);
+  --shadow-elevation-3: 0 10px 24px rgb(0 0 0 / 0.3);
+  --shadow-elevation-4: 0 20px 40px rgb(0 0 0 / 0.35);
+
+  /* 3D bridge (read by sceneTheme.ts) */
+  --color-scene-ambient: #09090b;
+  --color-scene-accent: #2563eb;
+  --color-scene-fog: #09090b;
+  --color-scene-particle: #3b82f6;
+
+  /* Typography */
+  --font-sans: 'Space Grotesk', system-ui, -apple-system, 'Segoe UI', sans-serif;
+  --font-display: 'Archivo', 'Space Grotesk', system-ui, sans-serif;
+  --font-mono: ui-monospace, 'SF Mono', Consolas, monospace;
+
+  --radius-glass: 24px;
+}
+
+:root[data-theme='light'] {
+  --color-bg: #fafafa;
+  --color-surface: #ffffff;
+  --color-text: #0f172a;
+  --color-text-muted: #475569;
+  --color-accent: #2563eb;
+  --color-accent-2: #1d4ed8;
+  --color-cta: #2563eb;
+  --color-glow: rgb(37 99 235 / 0.2);
+
+  --color-glass: rgb(255 255 255 / 0.82);
+  --color-glass-border: #e2e8f0;
+  --blur-glass: 20px;
+
+  --color-scene-ambient: #f8fafc;
+  --color-scene-accent: #2563eb;
+  --color-scene-fog: #f1f5f9;
+  --color-scene-particle: #3b82f6;
+
+  --shadow-elevation-1: 0 1px 3px rgb(15 23 42 / 0.08);
+  --shadow-elevation-2: 0 4px 12px rgb(15 23 42 / 0.1);
+  --shadow-elevation-3: 0 10px 24px rgb(15 23 42 / 0.12);
+  --shadow-elevation-4: 0 20px 40px rgb(15 23 42 / 0.14);
+}
+
+/* Compact layout: more opaque glass so content stays readable over 3D */
+@media (max-width: 1023px) {
+  :root:not([data-theme='light']) {
+    --color-glass: color-mix(in srgb, var(--color-surface) 96%, transparent);
+    --color-glass-border: rgb(255 255 255 / 0.26);
+  }
+}
+
+html {
+  scroll-padding-top: 8rem;
+  background: var(--color-bg);
+  color: var(--color-text);
+  overflow-x: hidden;
+}
+
+/* ─── Theme toggle: View Transitions API (nav + page captured together) ─── */
+::view-transition-old(root),
+::view-transition-new(root) {
+  height: auto;
+  min-height: 100%;
+  animation-duration: var(--theme-transition-duration, 900ms);
+  animation-timing-function: var(--animation-ease-out);
+  mix-blend-mode: normal;
+}
+
+::view-transition-old(root) {
+  z-index: 1;
+  animation: none;
+}
+
+::view-transition-new(root) {
+  z-index: 2;
+  animation-name: theme-view-reveal;
+}
+
+@keyframes theme-view-reveal {
+  from {
+    clip-path: circle(
+      0% at var(--theme-transition-x, 50vw) var(--theme-transition-y, 2rem)
+    );
+  }
+  to {
+    clip-path: circle(
+      150vmax at var(--theme-transition-x, 50vw) var(--theme-transition-y, 2rem)
+    );
+  }
+}
+
+/* Fallback: smooth token crossfade + subtle ripple when VT is unavailable */
+html[data-theme-transition='fallback']::after {
+  content: '';
+  position: fixed;
+  inset: 0;
+  z-index: 9999;
+  pointer-events: none;
+  background: radial-gradient(
+    circle at var(--theme-transition-x, 50vw) var(--theme-transition-y, 2rem),
+    color-mix(in srgb, var(--color-accent) 22%, transparent) 0%,
+    transparent 65%
+  );
+  animation: theme-fallback-ripple var(--theme-transition-duration, 900ms)
+    var(--animation-ease-out) forwards;
+  will-change: transform, opacity;
+}
+
+@keyframes theme-fallback-ripple {
+  from {
+    opacity: 0.85;
+    transform: scale(0.2);
+  }
+  to {
+    opacity: 0;
+    transform: scale(2.8);
+  }
+}
+
+html[data-theme-transition='fallback'],
+html[data-theme-transition='fallback'] *:not(canvas) {
+  transition-property: background-color, color, border-color, box-shadow, fill, stroke;
+  transition-duration: var(--theme-transition-duration, 900ms);
+  transition-timing-function: var(--animation-ease-out);
+}
+
+body {
+  margin: 0;
+  overflow-x: hidden;
+  max-width: 100vw;
+  font-family: var(--font-sans);
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  text-rendering: optimizeLegibility;
+  background: var(--color-bg);
+}
+
+/* WebGL canvas must stay transparent so the model blends with page bg */
+canvas {
+  background: transparent !important;
+}
+
+h1,
+h2,
+h3,
+h4 {
+  font-family: var(--font-display);
+}
+
+:focus-visible {
+  outline: 2px solid var(--color-accent);
+  outline-offset: 3px;
+  border-radius: 4px;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+  ::view-transition-old(root),
+  ::view-transition-new(root) {
+    animation: none !important;
+  }
+  html[data-theme-transition='fallback']::after {
+    animation: none !important;
+    opacity: 0 !important;
+  }
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.001ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.001ms !important;
+  }
+}
+
+@layer base {
+  button:not(:disabled),
+  a,
+  [role='button'],
+  summary,
+  label[for] {
+    cursor: pointer;
+  }
+}
+
+@utility glass {
+  background: var(--color-glass);
+  border: 1px solid var(--color-glass-border);
+  backdrop-filter: blur(var(--blur-glass));
+  -webkit-backdrop-filter: blur(var(--blur-glass));
+  border-radius: var(--radius-glass);
+  box-shadow: var(--shadow-elevation-2);
+}
+
+@utility glass-panel {
+  background: var(--color-glass);
+  border: 1px solid var(--color-glass-border);
+  backdrop-filter: blur(var(--blur-glass));
+  -webkit-backdrop-filter: blur(var(--blur-glass));
+  border-radius: var(--radius-glass);
+  box-shadow: var(--shadow-elevation-3);
+}
+
+@utility elevation-hover {
+  transition:
+    box-shadow var(--animation-duration) var(--animation-ease-out),
+    border-color var(--animation-duration) var(--animation-ease-out);
+
+  &:hover {
+    box-shadow: var(--shadow-elevation-4);
+    border-color: color-mix(in srgb, var(--color-accent) 30%, var(--color-glass-border));
+  }
+}

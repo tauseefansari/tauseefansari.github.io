@@ -1,0 +1,163 @@
+{
+  "hero": {
+    "greeting": "Hi, I'm",
+    "role": "Software Engineer II @ Deloitte",
+    "tagline": "I build high-performance, AI-augmented web applications with React, Next.js, and TypeScript.",
+    "cta": "View my work",
+    "resumeCta": "Resume",
+    "resumeAria": "Download {{name}}'s resume (PDF)",
+    "scrollHint": "Scroll to explore"
+  },
+  "about": {
+    "title": "About Me",
+    "lead": "AI-Enhanced Software Engineer turning complex requirements into fast, accessible, production-ready interfaces.",
+    "body": "5+ years building scalable full-stack web applications. I specialize in React, Next.js, TypeScript and component-driven architectures, with a strong focus on performance, accessibility, and developer experience. I leverage GenAI tooling (Copilot, ChatGPT, Claude) to accelerate delivery without compromising on craft, type safety, or test coverage.",
+    "stats": {
+      "experience": { "value": "5+", "label": "Years of experience" },
+      "designs": { "value": "50+", "label": "Designs shipped to production" },
+      "tests": { "value": "200+", "label": "Unit & integration tests" }
+    }
+  },
+  "portfolio": {
+    "title": "Selected Work",
+    "subtitle": "Side projects exploring full-stack patterns and developer tooling.",
+    "links": {
+      "code": "Code",
+      "demo": "Demo"
+    },
+    "items": {
+      "nextFood": {
+        "name": "Next Food",
+        "description": "Community recipe-sharing platform built on the Next.js App Router — browse, share, and discover meals from a food-loving community.",
+        "stack": "Next.js 14 · TypeScript · App Router"
+      },
+      "portfolioBuilder": {
+        "name": "Portfolio Builder",
+        "description": "Generator that turns user data into a customized portfolio site, with Redux Toolkit driving a clean, maintainable state layer.",
+        "stack": "React · TypeScript · Redux Toolkit"
+      },
+      "strategyFilter": {
+        "name": "Strategy Filter",
+        "description": "A compact TypeScript utility for filtering and composing strategy patterns — focused on clean abstractions and type-safe APIs.",
+        "stack": "TypeScript"
+      },
+      "eLearningSystem": {
+        "name": "E-Learning System",
+        "description": "Full-stack digital learning platform replacing paper-based tutorials with managed courses, content delivery, and student workflows.",
+        "stack": "JavaScript · Node.js · Full-stack"
+      },
+      "resumeBuilder": {
+        "name": "Resume Builder",
+        "description": "Responsive React resume builder — generate a CV from a GitHub username or craft a custom layout, then export to PDF with accessibility built in.",
+        "stack": "React · Material UI · PDF export"
+      }
+    }
+  },
+  "skills": {
+    "title": "Skills",
+    "subtitle": "Technologies and tools I use to ship production software.",
+    "items": {
+      "react": "React",
+      "nextdotjs": "Next.js",
+      "typescript": "TypeScript",
+      "javascript": "JavaScript",
+      "openjdk": "Java",
+      "python": "Python",
+      "php": "PHP",
+      "cplusplus": "C++",
+      "tailwindcss": "Tailwind CSS",
+      "codeigniter": "CodeIgniter",
+      "qt": "PyQt5",
+      "git": "Git",
+      "github": "GitHub",
+      "subversion": "SVN",
+      "jenkins": "Jenkins",
+      "githubactions": "GitHub Actions",
+      "figma": "Figma",
+      "mysql": "MySQL",
+      "postgresql": "PostgreSQL",
+      "googlecloud": "Google Cloud",
+      "githubcopilot": "GitHub Copilot",
+      "claude": "Claude",
+      "cursor": "Cursor"
+    }
+  },
+  "testimonials": {
+    "title": "What people say",
+    "subtitle": "Recommendations from LinkedIn connections.",
+    "items": {
+      "aamir": {
+        "quote": "I feel myself lucky to have a friend like you. You are having a very great problem solving skills and backend implementations. With the help of you I had explore myself how to solve competitive programming questions. Best of luck my friend",
+        "author": "Aamir Thekiya",
+        "position": "LinkedIn recommendation"
+      },
+      "mohsin": {
+        "quote": "Working with you is like learning and implementing the real time projects. Your logics for implementing the backend is very amazing. Without your support It was impossible to develop highly scaled projects. I wish you all the best for your future and hoping to meet and work in future with you",
+        "author": "Mohsin Essani",
+        "position": "LinkedIn recommendation"
+      }
+    }
+  },
+  "timeline": {
+    "title": "Journey",
+    "subtitle": "Study and work timeline.",
+    "items": {
+      "diploma": {
+        "period": "2015 — 2018",
+        "title": "Diploma in Information Technology",
+        "organization": "Government Polytechnic Mumbai",
+        "description": "Graduated with 86.87%. Foundations in programming, databases, and software engineering.",
+        "type": "study"
+      },
+      "bachelor": {
+        "period": "2018 — 2021",
+        "title": "B.E. in Information Technology",
+        "organization": "M.H. Saboo Siddik College of Engineering",
+        "description": "Graduated with CGPA 9.10. ACM Hackathon winner — first prize and internship offer.",
+        "type": "study"
+      },
+      "mitr": {
+        "period": "2021 — 2025",
+        "title": "Software Engineer (Band 1)",
+        "organization": "MITR Learning and Media",
+        "description": "Built a 20+ component library, cut load times 25% via code splitting and image optimization, and reached 95% test coverage with Jest, RTL, and Playwright.",
+        "type": "work"
+      },
+      "deloitte": {
+        "period": "2025 — Present",
+        "title": "Software Engineer II",
+        "organization": "Deloitte",
+        "description": "Architecting scalable Next.js + Vite apps with SSR/SSG (+20pt Lighthouse), a 30+ component design system, RTK Query data layers, and 90%+ coverage across 30k+ LOC.",
+        "type": "work"
+      }
+    }
+  },
+  "contact": {
+    "title": "Let's build something",
+    "tagline": "Open to senior frontend, full-stack, and AI-augmented engineering roles.",
+    "cta": "Get in touch",
+    "form": {
+      "name": "Name",
+      "namePlaceholder": "Your name",
+      "email": "Email",
+      "emailPlaceholder": "you@example.com",
+      "message": "Message",
+      "messagePlaceholder": "Tell me about your project…",
+      "submit": "Send message",
+      "submitting": "Sending…",
+      "success": "Thanks! Your message has been sent.",
+      "error": "Something went wrong. Please try again.",
+      "validation": {
+        "nameRequired": "Please enter your name.",
+        "emailRequired": "Please enter your email.",
+        "emailInvalid": "Please enter a valid email address.",
+        "messageRequired": "Please enter a message."
+      }
+    }
+  },
+  "footer": {
+    "tagline": "Designed and built with care.",
+    "rights": "All rights reserved.",
+    "backToTop": "Back to top"
+  }
+}

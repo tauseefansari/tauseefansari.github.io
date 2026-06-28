@@ -1,0 +1,79 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" width="64" height="64" role="img" aria-label="Portfolio">
+  <defs>
+    <!-- Aluminium body gradient (light → mid silver) -->
+    <linearGradient id="body" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#e6e8ee"/>
+      <stop offset="100%" stop-color="#a8adb6"/>
+    </linearGradient>
+    <!-- Glowing screen (matches the in-app emissive #3b2a78 / accent) -->
+    <linearGradient id="screen" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#3b2a78"/>
+      <stop offset="100%" stop-color="#1a1230"/>
+    </linearGradient>
+    <!-- Accent gradient for the code lines -->
+    <linearGradient id="accent" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0%" stop-color="#7e14ff"/>
+      <stop offset="100%" stop-color="#06d6a0"/>
+    </linearGradient>
+  </defs>
+
+  <!-- Soft glow under the laptop -->
+  <ellipse cx="32" cy="55" rx="22" ry="2.5" fill="#7e14ff" opacity="0.18"/>
+
+  <!-- Lid (screen back) — slightly tilted forward via x-skew on the rounded rect -->
+  <g>
+    <!-- Lid frame / bezel -->
+    <rect x="10" y="6" width="44" height="32" rx="3" fill="url(#body)" stroke="#9097a1" stroke-width="0.5"/>
+    <!-- Inner screen -->
+    <rect x="13" y="9" width="38" height="26" rx="1.5" fill="url(#screen)"/>
+    <!-- Camera notch -->
+    <rect x="30" y="9" width="4" height="1.2" rx="0.6" fill="#0b0a14"/>
+
+    <!-- Code editor gutter -->
+    <g opacity="0.45">
+      <rect x="15" y="13.5" width="1.2" height="1.2" rx="0.3" fill="#9aa0aa"/>
+      <rect x="15" y="16"   width="1.2" height="1.2" rx="0.3" fill="#9aa0aa"/>
+      <rect x="15" y="18.5" width="1.2" height="1.2" rx="0.3" fill="#9aa0aa"/>
+      <rect x="15" y="21"   width="1.2" height="1.2" rx="0.3" fill="#9aa0aa"/>
+      <rect x="15" y="23.5" width="1.2" height="1.2" rx="0.3" fill="#9aa0aa"/>
+      <rect x="15" y="26"   width="1.2" height="1.2" rx="0.3" fill="#9aa0aa"/>
+      <rect x="15" y="28.5" width="1.2" height="1.2" rx="0.3" fill="#9aa0aa"/>
+      <rect x="15" y="31"   width="1.2" height="1.2" rx="0.3" fill="#9aa0aa"/>
+    </g>
+
+    <!-- Code lines (colourful tokens) -->
+    <g>
+      <rect x="19" y="13.5" width="9"  height="1.4" rx="0.6" fill="#4cc9f0"/>
+      <rect x="29" y="13.5" width="6"  height="1.4" rx="0.6" fill="#06d6a0"/>
+
+      <rect x="21" y="16"   width="11" height="1.4" rx="0.6" fill="#f72585"/>
+      <rect x="33" y="16"   width="5"  height="1.4" rx="0.6" fill="#ffd166"/>
+
+      <rect x="19" y="18.5" width="7"  height="1.4" rx="0.6" fill="#ffd166"/>
+      <rect x="27" y="18.5" width="9"  height="1.4" rx="0.6" fill="#9d4edd"/>
+
+      <rect x="21" y="21"   width="14" height="1.4" rx="0.6" fill="#ececf1"/>
+
+      <rect x="19" y="23.5" width="6"  height="1.4" rx="0.6" fill="#4cc9f0"/>
+      <rect x="26" y="23.5" width="10" height="1.4" rx="0.6" fill="#06d6a0"/>
+
+      <rect x="21" y="26"   width="12" height="1.4" rx="0.6" fill="#f72585"/>
+      <rect x="34" y="26"   width="4"  height="1.4" rx="0.6" fill="#ffd166"/>
+
+      <rect x="19" y="28.5" width="10" height="1.4" rx="0.6" fill="#9d4edd"/>
+
+      <rect x="21" y="31"   width="8"  height="1.4" rx="0.6" fill="#06d6a0"/>
+      <rect x="30" y="31"   width="6"  height="1.4" rx="0.6" fill="#4cc9f0"/>
+    </g>
+  </g>
+
+  <!-- Hinge shadow line under the lid -->
+  <rect x="8" y="38" width="48" height="1" fill="#6c7079" opacity="0.45"/>
+
+  <!-- Base / deck (trapezoid via path so it reads as opened laptop) -->
+  <path d="M6 39 H58 L62 45 H2 Z" fill="url(#body)" stroke="#9097a1" stroke-width="0.5"/>
+  <!-- Trackpad notch in the deck -->
+  <path d="M26 39 H38 L37 41 H27 Z" fill="#6c7079" opacity="0.55"/>
+  <!-- Front bevel underline -->
+  <rect x="2" y="44.6" width="60" height="0.8" rx="0.4" fill="#6c7079" opacity="0.6"/>
+</svg>

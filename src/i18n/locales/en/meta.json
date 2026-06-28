@@ -1,0 +1,6 @@
+{
+  "title": "{{name}} — {{role}}",
+  "description": "Portfolio of {{name}}: AI-augmented software engineering, React, Next.js, TypeScript, performance, accessibility, and component-driven design.",
+  "ogTitle": "{{name}} — {{role}}",
+  "ogDescription": "An interactive 3D portfolio built with React, Three.js, and WebGL."
+}

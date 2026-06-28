@@ -1,0 +1,45 @@
+{
+  "nav": {
+    "home": "Home",
+    "about": "About",
+    "work": "Work",
+    "skills": "Skills",
+    "testimonials": "Testimonials",
+    "timeline": "Journey",
+    "contact": "Contact"
+  },
+  "a11y": {
+    "skipToContent": "Skip to content",
+    "canvasLabel": "Decorative 3D background",
+    "sectionChanged": "Now viewing {{section}}",
+    "loading": "Loading experience",
+    "openMenu": "Open navigation menu",
+    "closeMenu": "Close navigation menu",
+    "socialLink": "{{name}} profile",
+    "projectRepo": "{{name}} source code on GitHub",
+    "projectDemo": "{{name}} live demo"
+  },
+  "social": {
+    "linkedin": "LinkedIn",
+    "github": "GitHub",
+    "facebook": "Facebook",
+    "instagram": "Instagram",
+    "whatsapp": "WhatsApp",
+    "email": "Email"
+  },
+  "theme": {
+    "toggle": "Toggle color theme",
+    "light": "Switch to light mode",
+    "dark": "Switch to dark mode"
+  },
+  "loader": {
+    "label": "Loading",
+    "progress": "{{percent}}% loaded",
+    "status": {
+      "preparing": "Preparing your experience",
+      "scene": "Initializing 3D scene",
+      "almost": "Almost ready",
+      "ready": "Welcome"
+    }
+  }
+}

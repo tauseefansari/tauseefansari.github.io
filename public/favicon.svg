@@ -1,0 +1,20 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" width="64" height="64" role="img" aria-label="Portfolio">
+  <defs>
+    <linearGradient id="body" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#e6e8ee"/>
+      <stop offset="100%" stop-color="#a8adb6"/>
+    </linearGradient>
+    <linearGradient id="screen" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#3b2a78"/>
+      <stop offset="100%" stop-color="#1a1230"/>
+    </linearGradient>
+  </defs>
+  <ellipse cx="32" cy="55" rx="22" ry="2.5" fill="#2563eb" opacity="0.22"/>
+  <rect x="10" y="6" width="44" height="32" rx="3" fill="url(#body)" stroke="#9097a1" stroke-width="0.5"/>
+  <rect x="13" y="9" width="38" height="26" rx="1.5" fill="url(#screen)"/>
+  <rect x="19" y="16" width="14" height="1.4" rx="0.6" fill="#3b82f6"/>
+  <rect x="19" y="21" width="12" height="1.4" rx="0.6" fill="#60a5fa"/>
+  <rect x="19" y="26" width="10" height="1.4" rx="0.6" fill="#93c5fd"/>
+  <rect x="8" y="38" width="48" height="1" fill="#6c7079" opacity="0.45"/>
+  <path d="M6 39 H58 L62 45 H2 Z" fill="url(#body)" stroke="#9097a1" stroke-width="0.5"/>
+</svg>
