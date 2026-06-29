@@ -1,0 +1,2 @@
+# Format + lint staged files; lint-staged re-stages fixes so commits only include formatted code.
+npx lint-staged
