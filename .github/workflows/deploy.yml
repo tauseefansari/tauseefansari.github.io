@@ -1,0 +1,74 @@
+name: Deploy to GitHub Pages
+
+# Publishes the production build to GitHub Pages on every push to `main`.
+# Uses the official Pages deployment action — no `gh-pages` branch required.
+
+on:
+  push:
+    branches: [main]
+  workflow_dispatch:
+
+permissions:
+  contents: read
+  pages: write
+  id-token: write
+
+# Cancel an in-flight deploy if a newer commit lands.
+concurrency:
+  group: pages
+  cancel-in-progress: true
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 20
+          cache: npm
+
+      - name: Install dependencies
+        run: npm ci --include=optional
+
+      - name: Resolve Vite base path
+        id: vite_base
+        run: |
+          if [ "${{ github.event.repository.name }}" = "${{ github.repository_owner }}.github.io" ]; then
+            echo "value=/" >> "$GITHUB_OUTPUT"
+          else
+            echo "value=/${{ github.event.repository.name }}/" >> "$GITHUB_OUTPUT"
+          fi
+
+      - name: Build
+        # User Pages (`username.github.io`) serves from `/`; project sites use `/<repo>/`.
+        # `VITE_GITHUB_USERNAME` defaults to the repo owner for project preview images.
+        # `VITE_WEB3FORMS_KEY` is the contact form's access key — stored as a
+        # GitHub Actions secret so it never lives in source control.
+        run: npm run build
+        env:
+          VITE_BASE: ${{ steps.vite_base.outputs.value }}
+          VITE_GITHUB_USERNAME: ${{ github.repository_owner }}
+          VITE_WEB3FORMS_KEY: ${{ secrets.VITE_WEB3FORMS_KEY }}
+          VITE_RESUME_URL: ${{ secrets.VITE_RESUME_URL }}
+
+      - name: Disable Jekyll
+        # Pages would otherwise skip files/folders starting with an underscore
+        # (Vite emits an `assets/` directory but workbox + future tooling may
+        # emit `_*` paths). Empty `.nojekyll` opts out of Jekyll processing.
+        run: touch dist/.nojekyll
+
+      - uses: actions/upload-pages-artifact@v3
+        with:
+          path: dist
+
+  deploy:
+    needs: build
+    runs-on: ubuntu-latest
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    steps:
+      - id: deployment
+        uses: actions/deploy-pages@v4
